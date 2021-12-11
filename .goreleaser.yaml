@@ -1,0 +1,14 @@
+env:
+  - CGO_ENABLED=0
+archives:
+  - format: binary
+builds:
+- goos:
+    - linux
+    - darwin
+    - windows
+  goarch:
+    - amd64
+  main: ./main.go
+  binary: aws-dex-login
+  id: 'aws-dex-login'
